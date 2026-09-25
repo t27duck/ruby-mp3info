@@ -1,13 +1,8 @@
-# -*- ruby -*-
+# frozen_string_literal: true
 
-require 'hoe'
+require "bundler/gem_tasks"
+require "minitest/test_task"
 
-Hoe.plugin :yard
-Hoe.plugin :gemspec
+Minitest::TestTask.create
 
-Hoe.spec('ruby-mp3info') do
-  developer "Guillaume Pierronnet", "guillaume.pierronnet@gmail.com"
-  self.urls = {}
-end
-
-# vim: syntax=Ruby
+task default: :test

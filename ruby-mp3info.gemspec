@@ -9,8 +9,7 @@ Gem::Specification.new do |s|
   s.date = %q{2015-07-13}
   s.description = %q{ruby-mp3info read low-level informations and manipulate tags on mp3 files.}
   s.email = ["guillaume.pierronnet@gmail.com"]
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.md"]
-  s.files = ["History.txt", "Manifest.txt", "README.md", "Rakefile", "lib/mp3info.rb", "lib/mp3info/extension_modules.rb", "lib/mp3info/id3v2.rb", "test/test_ruby-mp3info.rb"]
+  s.files = ["History.txt", "README.md", "Rakefile", "lib/mp3info.rb", "lib/mp3info/extension_modules.rb", "lib/mp3info/id3v2.rb", "test/test_ruby-mp3info.rb"]
   s.homepage = %q{http://github.com/moumar/ruby-mp3info}
   s.rdoc_options = ["--main", "README.md"]
   s.require_paths = ["lib"]
@@ -19,19 +18,4 @@ Gem::Specification.new do |s|
   s.summary = %q{ruby-mp3info read low-level informations and manipulate tags on mp3 files.}
   s.test_files = ["test/test_ruby-mp3info.rb"]
   s.license = 'GPL-3.0'
-
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rdoc>, ["~> 3.10"])
-      s.add_development_dependency(%q<hoe>, ["~> 2.12"])
-    else
-      s.add_dependency(%q<rdoc>, ["~> 3.10"])
-      s.add_dependency(%q<hoe>, ["~> 2.12"])
-    end
-  else
-    s.add_dependency(%q<rdoc>, ["~> 3.10"])
-    s.add_dependency(%q<hoe>, ["~> 2.12"])
-  end
 end

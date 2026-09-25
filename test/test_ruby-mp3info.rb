@@ -1,12 +1,9 @@
-#!/usr/bin/env ruby
-# encoding: utf-8
 # frozen_string_literal: true
 
 dir = File.dirname(__FILE__)
 $:.unshift("#{dir}/../lib/")
 $:.unshift("#{dir}/../test")
 
-require "helper"
 require "mp3info"
 require "fileutils"
 require "tempfile"
@@ -15,7 +12,7 @@ require "yaml"
 
 GOT_ID3V2 = system("which id3v2 > /dev/null")
 
-class Mp3InfoTest < TestCase
+class Mp3InfoTest < Minitest::Test
   TEMP_FILE = File.join(File.dirname(__FILE__), "test_mp3info.mp3")
 
   DUMMY_TAG2 = {
